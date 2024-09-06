@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ai.remi.cms</groupId>
+    <artifactId>remi-cms</artifactId>
+    <version>3.1.0</version>
+    <packaging>pom</packaging>
+    <url>https://github.com/startdis/remi-cms</url>
+    <name>remi-cms</name>
+    <description>瑞米身份管理平台</description>
+
+    <developers>
+        <developer>
+            <name>dianjiu</name>
+            <email>dianjiuxyz@gmail.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <!--startdis-->
+        <remi-comm.version>3.1.0</remi-comm.version>
+        <remi-cms.version>3.1.0</remi-cms.version>
+        <!--jdk-->
+        <java.version>17</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <!--UFT-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!--Spring-->
+        <spring-boot.version>2.7.18</spring-boot.version>
+        <spring-cloud.version>2021.0.9</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.6.0</spring-cloud-alibaba.version>
+        <!--1.18.34-->
+        <lombok.version>1.18.34</lombok.version>
+        <!--1.5.2.Final-->
+        <mapstruct.version>1.5.2.Final</mapstruct.version>
+        <!--0.2.0-->
+        <lombok-mapstruct.version>0.2.0</lombok-mapstruct.version>
+        <!--1.7.36-->
+        <slf4j.version>1.7.32</slf4j.version>
+        <!--logback-->
+        <logback.version>1.3.14</logback.version>
+    </properties>
+
+    <modules>
+        <module>remi-cms-domain</module>
+        <module>remi-cms-infra</module>
+        <module>remi-cms-server</module>
+        <module>remi-cms-job</module>
+        <module>remi-cms-app</module>
+        <module>remi-cms-api</module>
+        <module>remi-cms-web</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBoot 依赖配置 -->
+            <dependency>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <groupId>org.springframework.boot</groupId>
+                <scope>import</scope>
+                <type>pom</type>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- SpringCloud 微服务 -->
+            <dependency>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <groupId>org.springframework.cloud</groupId>
+                <scope>import</scope>
+                <type>pom</type>
+                <version>${spring-cloud.version}</version>
+            </dependency>
+
+            <!-- SpringCloud Alibaba 微服务 -->
+            <dependency>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <groupId>com.alibaba.cloud</groupId>
+                <scope>import</scope>
+                <type>pom</type>
+                <version>${spring-cloud-alibaba.version}</version>
+            </dependency>
+
+            <!--内部服务依赖开始-->
+            <!--remi-comm-->
+            <dependency>
+                <artifactId>remi-comm</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-core</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-minio</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-redis</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-jdbc</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-domain</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-exception</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-feign</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-job</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-log</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-swagger</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-thread</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-util</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-auth</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-safe</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>remi-comm-web</artifactId>
+                <groupId>ai.remi.comm</groupId>
+                <version>${remi-comm.version}</version>
+            </dependency>
+            <!--remi-cms-->
+            <dependency>
+                <groupId>ai.remi.cms</groupId>
+                <artifactId>remi-cms</artifactId>
+                <version>${remi-cms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.remi.cms</groupId>
+                <artifactId>remi-cms-domain</artifactId>
+                <version>${remi-cms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.remi.cms</groupId>
+                <artifactId>remi-cms-infra</artifactId>
+                <version>${remi-cms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.remi.cms</groupId>
+                <artifactId>remi-cms-server</artifactId>
+                <version>${remi-cms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.remi.cms</groupId>
+                <artifactId>remi-cms-job</artifactId>
+                <version>${remi-cms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.remi.cms</groupId>
+                <artifactId>remi-cms-api</artifactId>
+                <version>${remi-cms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.remi.cms</groupId>
+                <artifactId>remi-cms-app</artifactId>
+                <version>${remi-cms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.remi.cms</groupId>
+                <artifactId>remi-cms-web</artifactId>
+                <version>${remi-cms.version}</version>
+            </dependency>
+            <!--内部服务依赖结束-->
+
+            <!--其他公共依赖开始-->
+            <!--其他公共依赖结束-->
+        </dependencies>
+    </dependencyManagement>
+
+    <!--<repositories>-->
+    <!--    <repository>-->
+    <!--        <id>public</id>-->
+    <!--        <name>remi nexus</name>-->
+    <!--        <url>https://repository.njydsz.com/repository/maven-public</url>-->
+    <!--        <releases>-->
+    <!--            <enabled>true</enabled>-->
+    <!--        </releases>-->
+    <!--        <snapshots>-->
+    <!--            <enabled>false</enabled>-->
+    <!--        </snapshots>-->
+    <!--    </repository>-->
+    <!--</repositories>-->
+
+    <!-- 打包上传到私服， 需要和配置文件中的server节点配合使用 -->
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>release</name>
+            <url>https://repository.njydsz.com/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>snapshot</name>
+            <url>https://repository.njydsz.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
