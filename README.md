@@ -11,6 +11,12 @@ Remi CMS是一种用于创建、管理和发布数字内容的应用程序框架
 在这里补充下设计师的设计理念：**所见即所得，极简且易用**。    
 您的 **Star** 是对他们付出的最大肯定。
 
+## 体验地址
+
+https://cms.remi.run （搭建中，敬请期待）
+
+RemiAdmin/123456
+
 ## 项目规划
 <img src="./docs/images/step.png"/>
 
@@ -19,13 +25,7 @@ Remi CMS是一种用于创建、管理和发布数字内容的应用程序框架
 - [使用手册](https://remi.yuque.com/gvwcfc/vwwd5c)
 - [操作视频](https://remi.yuque.com/gvwcfc/video) （正在抓紧更新，敬请期待）
 
-## 体验地址
-
-https://cms.remi.run （搭建中，敬请期待）
-
-RemiAdmin/123456
-
-### 模块说明
+## 模块说明
 ~~~
 remi-cms    
 ├── docker                                         // 容器部署
