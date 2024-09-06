@@ -1,92 +1,52 @@
-# Remi Cms
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">Remi CMS</h1>
+<h4 align="center">Remi CMS是基于瑞米快速开发平台（Remi Cloud）搭建的内容管理系统。</h4>
+
+## 平台简介
+Remi CMS是一种用于创建、管理和发布数字内容的应用程序框架。它允许用户在不需要深入的技术知识的情况下，有效地组织、修改和发布各种形式的内容，如文本、图片、视频等。Remi CMS适用于从个人博客到大型企业的官方网站，再到新闻门户、电子商务平台等多种类型的网站。无论是小型项目还是复杂的多站点部署，CMS都能提供灵活且强大的解决方案。 基于[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)协议，毫无保留给个人及企业免费使用，由[江苏点九科技有限公司](https://dianjiu.cc)提供技术支持。
+
+- 前端开发框架，请移步[Remi-Admin](https://gitee.com/remi-top/remi-admin)
+- 后端开发框架，请移步[Remi-Cloud](https://gitee.com/remi-top/remi-cloud)
+
+## 设计理念
+在这里补充下设计师的设计理念：**所见即所得，极简且易用**。您的 **Star** 是对他们付出的最大肯定。
+
+我相信大家在使用过程中能体验到设计师的用心之处，颜色的高对比度、左侧菜单的设计、减少了弹框的嵌套、三等分的抽屉使用等，让用户体验更加友好。   
+瑞米平台目前还在公测阶段，可能会些许不足，也请您给些包容并及时反馈给我们，24年年底我们定会按时交出让您满意的瑞米快速开发平台。
+
+## 项目规划
+<img src="./docs/images/step.png"/>
+
+- 项目文档，请访问[语雀笔记](https://remi.yuque.com/r/organizations/homepage)
+- [更新日志](https://remi.yuque.com/gvwcfc/dvpw89)
+- [使用手册](https://remi.yuque.com/gvwcfc/vwwd5c)
+- [操作视频](https://remi.yuque.com/gvwcfc/video) （正在抓紧更新，敬请期待）
+
+## 体验地址
+
+https://cms.remi.run （搭建中，敬请期待）
+
+RemiAdmin/123456
+
+### 模块说明
+~~~
+remi-cms    
+├── docker                                         // 容器部署
+├── docs                                           // 说明文档
+│   └── drawio                                     // 流程图设计
+│   └── pdman                                      // 数据库设计
+│   └── sqls                                       // 数据库脚本
+│   └── envs                                       // 多环境配置
+├── remi-cms-api                                   // 服务间门面接口模块
+├── remi-cms-app                                   // C端门面接口模块(H5、小程序、App) [3020]
+├── remi-cms-uniapp                                // C端门面前端模块(H5、小程序、App) [3021]
+├── remi-cms-domain                                // 领域实体模块，包含实体、值对象、聚合、事件等
+├── remi-cms-infra                                 // 领域基础设施模块，包含持久化
+├── remi-cms-job                                   // 分布式任务实现模块
+├── remi-cms-server                                // 业务服务实现模块
+├── remi-cms-web                                   // B端门户接口模块 [3010]
+├── remi-cms-admin                                 // B端门户前端模块 [3011]
+├── pom.xml                                        // 公共依赖
+
+~~~
 
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.njydsz.com/remi-top/remi-cms.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](http://24a6c767a25d/remi-top/remi-cms/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
