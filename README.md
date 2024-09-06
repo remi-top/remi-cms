@@ -49,4 +49,12 @@ remi-cms
 
 ~~~
 
+## 反馈建议
+如果您对我们的产品或服务有任何疑问或需要帮助，欢迎添加我们的微信客服号。我们会在第一时间为您解答。此外，我们的微信群是一个活跃的社区，您可以在那里与其他用户交流经验，分享心得，获取最新的产品信息和版本通知。
+<table>
+	<tr>
+        <td><img src="./docs/images/dianjiu.jpg"/></td>
+        <td><img src="./docs/images/yunshu.jpg"/></td>
+    </tr>
+</table>
 
