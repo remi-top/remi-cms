@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 @Schema(description = "标签绑定")
 public class TagBindVO implements Serializable {
-    private static final long serialVersionUID = -78805173719025335L;
+    private static final long serialVersionUID = -56999800148228515L;
     /**
      * ID
      */
@@ -40,9 +40,9 @@ public class TagBindVO implements Serializable {
     @Schema(description = "标签编码")
     private String tagCode;
     /**
-     * 关联类型（1文章 2图片 3视频）
+     * 关联类型（1文章 2图片 3视频 4音频 5产品）
      */
-    @Schema(description = "关联类型（1文章 2图片 3视频）")
+    @Schema(description = "关联类型（1文章 2图片 3视频 4音频 5产品）")
     private Integer bindType;
     /**
      * 关联ID

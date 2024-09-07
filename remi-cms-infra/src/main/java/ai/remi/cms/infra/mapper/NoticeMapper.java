@@ -1,7 +1,7 @@
 package ai.remi.cms.infra.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import ai.remi.cms.domain.entity.Notice;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

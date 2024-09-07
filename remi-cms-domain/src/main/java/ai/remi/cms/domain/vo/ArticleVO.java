@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 @Schema(description = "文章内容")
 public class ArticleVO implements Serializable {
-    private static final long serialVersionUID = -77677911112648159L;
+    private static final long serialVersionUID = 516375980786275572L;
     /**
      * ID
      */
@@ -50,20 +50,40 @@ public class ArticleVO implements Serializable {
     @Schema(description = "文章标题")
     private String articleTitle;
     /**
+     * 文章英文标题
+     */
+    @Schema(description = "文章英文标题")
+    private String articleTitleEn;
+    /**
      * 文章副标题
      */
     @Schema(description = "文章副标题")
     private String articleSubTitle;
+    /**
+     * 文章英文副标题
+     */
+    @Schema(description = "文章英文副标题")
+    private String articleSubTitleEn;
     /**
      * 文章内容
      */
     @Schema(description = "文章内容")
     private String articleContent;
     /**
+     * 文章英文内容
+     */
+    @Schema(description = "文章英文内容")
+    private String articleContentEn;
+    /**
      * 文章摘要
      */
     @Schema(description = "文章摘要")
     private String articleSummary;
+    /**
+     * 文章英文摘要
+     */
+    @Schema(description = "文章英文摘要")
+    private String articleSummaryEn;
     /**
      * 文章路径
      */

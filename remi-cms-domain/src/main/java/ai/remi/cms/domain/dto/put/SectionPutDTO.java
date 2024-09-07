@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 @Schema(description = "栏目管理")
 public class SectionPutDTO implements Serializable {
-    private static final long serialVersionUID = 988957840470805651L;
+    private static final long serialVersionUID = 813400943192833565L;
 
     /**
      * ID
@@ -52,9 +52,9 @@ public class SectionPutDTO implements Serializable {
     private String sectionNameEn;
 
     /**
-     * 栏目类型（1首页 2聚合页 3列表页 4内容页 4单页 5外链）
+     * 栏目类型（1首页 2聚合页 3列表页 4内容页 5单页 6外链）
      */
-    @Schema(description = "栏目类型（1首页 2聚合页 3列表页 4内容页 4单页 5外链）")
+    @Schema(description = "栏目类型（1首页 2聚合页 3列表页 4内容页 5单页 6外链）")
     private Integer sectionType;
 
     /**

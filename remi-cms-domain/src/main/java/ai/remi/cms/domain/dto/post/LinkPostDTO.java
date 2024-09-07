@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 @Schema(description = "友情链接")
 public class LinkPostDTO implements Serializable {
-    private static final long serialVersionUID = -42875345818400776L;
+    private static final long serialVersionUID = 583060777461704991L;
 
 
     /**

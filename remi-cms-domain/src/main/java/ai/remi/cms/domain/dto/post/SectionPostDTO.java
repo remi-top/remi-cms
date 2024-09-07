@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * @author DianJiu
@@ -18,7 +19,7 @@ import java.io.Serializable;
 @ToString(callSuper = true)
 @Schema(description = "栏目管理")
 public class SectionPostDTO implements Serializable {
-    private static final long serialVersionUID = -93073689809516067L;
+    private static final long serialVersionUID = 956942593572816133L;
 
 
     /**
@@ -46,9 +47,9 @@ public class SectionPostDTO implements Serializable {
     private String sectionNameEn;
 
     /**
-     * 栏目类型（1首页 2聚合页 3列表页 4内容页 4单页 5外链）
+     * 栏目类型（1首页 2聚合页 3列表页 4内容页 5单页 6外链）
      */
-    @Schema(description = "栏目类型（1首页 2聚合页 3列表页 4内容页 4单页 5外链）")
+    @Schema(description = "栏目类型（1首页 2聚合页 3列表页 4内容页 5单页 6外链）")
     private Integer sectionType;
 
     /**

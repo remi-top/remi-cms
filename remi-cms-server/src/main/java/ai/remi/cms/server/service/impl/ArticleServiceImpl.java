@@ -1,9 +1,9 @@
 package ai.remi.cms.server.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import ai.remi.cms.domain.entity.Article;
 import ai.remi.cms.infra.mapper.ArticleMapper;
 import ai.remi.cms.server.service.ArticleService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

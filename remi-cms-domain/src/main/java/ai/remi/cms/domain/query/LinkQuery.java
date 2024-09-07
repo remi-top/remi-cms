@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 @Schema(description = "友情链接")
 public class LinkQuery implements Serializable {
-    private static final long serialVersionUID = -39162983513823268L;
+    private static final long serialVersionUID = -33450986045746161L;
     /**
      * ID
      */

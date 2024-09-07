@@ -1,11 +1,13 @@
 package ai.remi.cms.domain.query;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * @author DianJiu
@@ -19,42 +21,66 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 @Schema(description = "通知公告")
 public class NoticeQuery implements Serializable {
-    private static final long serialVersionUID = 611095481696674058L;
+    private static final long serialVersionUID = 553936352819612918L;
     /**
      * ID
      */
     @Schema(description = "ID")
     private String id;
     /**
-     * 通知类型
+     * 公告图标
      */
-    @Schema(description = "通知类型")
-    private Integer noticeType;
-    /**
-     * 通知图标
-     */
-    @Schema(description = "通知图标")
+    @Schema(description = "公告图标")
     private String noticeIcon;
     /**
-     * 通知内容
+     * 公告标题
      */
-    @Schema(description = "通知内容")
+    @Schema(description = "公告标题")
+    private String noticeTitle;
+    /**
+     * 公告内容
+     */
+    @Schema(description = "公告内容")
     private String noticeContent;
     /**
-     * 通知英文内容
+     * 公告英文内容
      */
-    @Schema(description = "通知英文内容")
+    @Schema(description = "公告英文内容")
     private String noticeContentEn;
     /**
-     * 链接地址
+     * 浏览次数
      */
-    @Schema(description = "链接地址")
-    private String linkUrl;
+    @Schema(description = "浏览次数")
+    private String views;
+    /**
+     * 优先级（1低 2中 3高）
+     */
+    @Schema(description = "优先级（1低 2中 3高）")
+    private Integer priority;
+    /**
+     * 是否置顶（0正常 1置顶）
+     */
+    @Schema(description = "是否置顶（0正常 1置顶）")
+    private Integer pinned;
     /**
      * 是否启用（0停用 1启用）
      */
     @Schema(description = "是否启用（0停用 1启用）")
     private Integer status;
+    /**
+     * 到期时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @Schema(description = "到期时间")
+    private LocalDateTime expiresAt;
+    /**
+     * 发布时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @Schema(description = "发布时间")
+    private LocalDateTime publishAt;
 
 }
 

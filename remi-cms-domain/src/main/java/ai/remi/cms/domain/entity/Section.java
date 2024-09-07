@@ -41,7 +41,7 @@ public class Section extends BaseEntity {
     private String sectionNameEn;
 
     /**
-     * 栏目类型（1首页 2聚合页 3列表页 4内容页 4单页 5外链）
+     * 栏目类型（1首页 2聚合页 3列表页 4内容页 5单页 6外链）
      */
     private Integer sectionType;
 

@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 @Schema(description = "友情链接")
 public class LinkVO implements Serializable {
-    private static final long serialVersionUID = -97357960621793813L;
+    private static final long serialVersionUID = -30580041604812522L;
     /**
      * ID
      */

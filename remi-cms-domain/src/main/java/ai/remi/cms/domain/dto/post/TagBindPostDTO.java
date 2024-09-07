@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 @Schema(description = "标签绑定")
 public class TagBindPostDTO implements Serializable {
-    private static final long serialVersionUID = -69825754009859279L;
+    private static final long serialVersionUID = -41023188268176634L;
 
 
     /**
@@ -35,9 +35,9 @@ public class TagBindPostDTO implements Serializable {
     private String tagCode;
 
     /**
-     * 关联类型（1文章 2图片 3视频）
+     * 关联类型（1文章 2图片 3视频 4音频 5产品）
      */
-    @Schema(description = "关联类型（1文章 2图片 3视频）")
+    @Schema(description = "关联类型（1文章 2图片 3视频 4音频 5产品）")
     private Integer bindType;
 
     /**

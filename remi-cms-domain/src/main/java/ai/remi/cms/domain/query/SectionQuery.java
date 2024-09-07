@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 @Schema(description = "栏目管理")
 public class SectionQuery implements Serializable {
-    private static final long serialVersionUID = 589805616228947369L;
+    private static final long serialVersionUID = -26746564060543240L;
     /**
      * ID
      */
@@ -46,9 +46,9 @@ public class SectionQuery implements Serializable {
     @Schema(description = "栏目英文名称")
     private String sectionNameEn;
     /**
-     * 栏目类型（1首页 2聚合页 3列表页 4内容页 4单页 5外链）
+     * 栏目类型（1首页 2聚合页 3列表页 4内容页 5单页 6外链）
      */
-    @Schema(description = "栏目类型（1首页 2聚合页 3列表页 4内容页 4单页 5外链）")
+    @Schema(description = "栏目类型（1首页 2聚合页 3列表页 4内容页 5单页 6外链）")
     private Integer sectionType;
     /**
      * 栏目图标

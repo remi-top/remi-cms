@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 @Schema(description = "标签管理")
 public class TagPostDTO implements Serializable {
-    private static final long serialVersionUID = -94504678306519945L;
+    private static final long serialVersionUID = 341032900517959944L;
 
 
     /**

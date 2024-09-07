@@ -1,7 +1,7 @@
 package ai.remi.cms.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import ai.remi.comm.domain.entity.BaseEntity;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,7 +31,7 @@ public class TagBind extends BaseEntity {
     private String tagCode;
 
     /**
-     * 关联类型（1文章 2图片 3视频）
+     * 关联类型（1文章 2图片 3视频 4音频 5产品）
      */
     private Integer bindType;
 

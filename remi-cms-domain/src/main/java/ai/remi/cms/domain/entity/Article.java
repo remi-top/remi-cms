@@ -1,7 +1,7 @@
 package ai.remi.cms.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import ai.remi.comm.domain.entity.BaseEntity;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -43,9 +43,19 @@ public class Article extends BaseEntity {
     private String articleTitle;
 
     /**
+     * 文章英文标题
+     */
+    private String articleTitleEn;
+
+    /**
      * 文章副标题
      */
     private String articleSubTitle;
+
+    /**
+     * 文章英文副标题
+     */
+    private String articleSubTitleEn;
 
     /**
      * 文章内容
@@ -53,9 +63,19 @@ public class Article extends BaseEntity {
     private String articleContent;
 
     /**
+     * 文章英文内容
+     */
+    private String articleContentEn;
+
+    /**
      * 文章摘要
      */
     private String articleSummary;
+
+    /**
+     * 文章英文摘要
+     */
+    private String articleSummaryEn;
 
     /**
      * 文章路径

@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 @Schema(description = "标签管理")
 public class TagQuery implements Serializable {
-    private static final long serialVersionUID = -38565486694232946L;
+    private static final long serialVersionUID = -18835132722555321L;
     /**
      * ID
      */

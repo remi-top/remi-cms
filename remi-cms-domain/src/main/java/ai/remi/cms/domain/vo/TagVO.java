@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 @Schema(description = "标签管理")
 public class TagVO implements Serializable {
-    private static final long serialVersionUID = 479871792995607384L;
+    private static final long serialVersionUID = 315087306263923239L;
     /**
      * ID
      */
